@@ -3,9 +3,9 @@ FROM gitpod/workspace-full
 USER root
 
 ### cloud_sql_proxy ###
-ARG CLOUD_SQL_PROXY=/usr/local/bin/cloud_sql_proxy
+ENV CLOUD_SQL_PROXY=/usr/local/bin/cloud_sql_proxy
 RUN curl -fsSL https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 > $CLOUD_SQL_PROXY \
-    && chmod +x $CLOUD_SQL_PROXY
+    && chmod +x "$CLOUD_SQL_PROXY"
 
 ### Docker client ###
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \

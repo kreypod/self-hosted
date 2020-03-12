@@ -1,4 +1,4 @@
 image:
-  file: .gitpod.Dockerfile
+  file: gitpod/gitpod.Dockerfile
 tasks:
 - command: ./utils/create-gcp-resources.go
